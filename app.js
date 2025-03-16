@@ -28,11 +28,13 @@ function generarNumeroAleatorio()
 function mostrarSorteado(){
     document.getElementById('resultado').innerHTML='El amigo sorteado es : '+amigos.at(numeroGenerado);
     limpiarTexto();
+    amigos = [];
 
 }
 
 function agregarAmigo() {
     let nombreAmigo = document.getElementById('amigo').value;
+    document.getElementById('resultado').innerHTML='';
     console.log(nombreAmigo);
     if (!nombreAmigo) {
         alert("El campo esta vacio!");
