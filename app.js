@@ -18,6 +18,12 @@ function listarAmigos() {
     }
 }
 
+function generarNumeroAleatorio()
+{
+    let numeroGenerado =  Math.floor(Math.random()*amigos.length)+1;
+    console.log(numeroGenerado);
+}
+
 function agregarAmigo() {
     let nombreAmigo = document.getElementById('amigo').value;
     console.log(nombreAmigo);
@@ -43,6 +49,7 @@ function sortearAmigo() {
     else {  
         console.log(amigos);
         console.log(amigos.length);
+        generarNumeroAleatorio();
     }
 
 }
