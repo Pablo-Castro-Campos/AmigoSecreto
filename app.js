@@ -2,17 +2,16 @@
 let amigos = [];
 let listaHtml = document.getElementById('listaAmigos');
 
-function limpiarTexto(){
+function limpiarTexto() {
     document.getElementById('amigo').value = '';
-    while(listaHtml.firstChild)
-    {
+    while (listaHtml.firstChild) {
         listaHtml.removeChild(listaHtml.firstChild);
     }
 }
 
-function listarAmigos(){
-    
-    for(var i = 0; i <=(amigos.length)-1;i++){
+function listarAmigos() {
+
+    for (var i = 0; i <= (amigos.length) - 1; i++) {
         const li = document.createElement("li");
         li.innerHTML = amigos[i];
         listaHtml.appendChild(li);
@@ -31,6 +30,19 @@ function agregarAmigo() {
         limpiarTexto();
         listarAmigos();
         return;
+    }
+
+}
+
+function sortearAmigo() {
+    
+    if(amigos.length-1<0)
+    {
+        alert("No hay amigos agregados");
+    }
+    else {  
+        console.log(amigos);
+        console.log(amigos.length);
     }
 
 }
